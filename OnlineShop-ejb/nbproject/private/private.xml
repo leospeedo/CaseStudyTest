@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/java/com/onlineshop/entity/TransactionsPK.java</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/java/com/onlineshop/entity/Creditcard.java</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/java/com/onlineshop/ejb/Product.java</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/java/com/onlineshop/ejb/CustomerDAOLocal.java</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/java/com/onlineshop/ejb/CustomerDAO.java</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/java/com/onlineshop/ejb/Cart.java</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/java/com/onlineshop/entity/Prod.java</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/java/com/onlineshop/ejb/PaymentMethod.java</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/java/com/onlineshop/ejb/DebitCard.java</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/java/com/onlineshop/ejb/Address.java</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/conf/persistence.xml</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/java/com/onlineshop/entity/Cust.java</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/java/com/onlineshop/entity/Paymentmethod.java</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/java/com/onlineshop/entity/PaymentmethodPK.java</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/java/com/onlineshop/ejb/CreditCard.java</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/java/com/onlineshop/ejb/AddressLocal.java</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/java/com/onlineshop/entity/Transactions.java</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/java/com/onlineshop/entity/Cart.java</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-ejb/src/java/com/onlineshop/ejb/Transactions.java</file>
+        </group>
+    </open-files>
+</project-private>
