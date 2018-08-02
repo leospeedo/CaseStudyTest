@@ -7,8 +7,9 @@
             <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-war/web/register.xhtml</file>
             <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-war/web/homepage.xhtml</file>
             <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-war/src/java/com/onlineshop/model/CustomerBean.java</file>
-            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-war/web/welcomePrimefaces.xhtml</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-war/web/cart.xhtml</file>
             <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-war/web/index.xhtml</file>
+            <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-war/src/java/com/onlineshop/model/CartBean.java</file>
             <file>file:/Users/satyam/NetBeansProjects/OnlineShop/OnlineShop-war/web/WEB-INF/faces-config.xml</file>
         </group>
     </open-files>

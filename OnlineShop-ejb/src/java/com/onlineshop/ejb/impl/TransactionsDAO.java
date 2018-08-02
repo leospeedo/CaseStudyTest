@@ -12,7 +12,7 @@ import com.onlineshop.ejb.TransactionsDAOLocal;
  *
  * @author satyam
  */
-@Stateless
+@Stateless(mappedName = "onlineshop/ejb/transactionsDAO")
 public class TransactionsDAO implements TransactionsDAOLocal {
 
     // Add business logic below. (Right-click in editor and choose

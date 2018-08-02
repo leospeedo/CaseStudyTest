@@ -36,7 +36,6 @@ public class CustomerDAO implements CustomerDAOLocal {
         Query query=entityManager.createNamedQuery("Cust.findByEmailid", Cust.class);
         query.setParameter("emailid", emailId);
         Cust resultCust=(Cust)query.getSingleResult();
-        System.out.println(resultCust.getEmailid()+" "+resultCust.getPassword());
         return resultCust;
     }
 

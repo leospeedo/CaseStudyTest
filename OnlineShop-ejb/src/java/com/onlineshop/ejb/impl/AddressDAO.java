@@ -12,7 +12,7 @@ import com.onlineshop.ejb.AddressDAOLocal;
  *
  * @author satyam
  */
-@Stateless
+@Stateless(mappedName = "onlineshop/ejb/productDAO")
 public class AddressDAO implements AddressDAOLocal {
 
     // Add business logic below. (Right-click in editor and choose

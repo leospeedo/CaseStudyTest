@@ -28,7 +28,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Cart.findByCustomerid", query = "SELECT c FROM Cart c WHERE c.cartPK.customerid = :customerid")
     , @NamedQuery(name = "Cart.findByProductid", query = "SELECT c FROM Cart c WHERE c.cartPK.productid = :productid")
     , @NamedQuery(name = "Cart.findByQuantity", query = "SELECT c FROM Cart c WHERE c.quantity = :quantity")
-    , @NamedQuery(name ="Cart.findProductInCart",query="SELECT c FROM Cart c where c.cartPK.customerid= :customerid AND c.cartPK.productid= :productid")})
+    , @NamedQuery(name ="Cart.findProductInCart",query="SELECT c FROM Cart c where c.cartPK.customerid= :customerid AND c.cartPK.productid= :productid")
+    , @NamedQuery(name ="Cart.findProductsForUser",query="SELECT c FROM Cart c where c.cartPK.customerid= :customerid")})
 public class Cart implements Serializable {
 
     private static final long serialVersionUID = 1L;

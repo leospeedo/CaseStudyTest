@@ -14,6 +14,8 @@ import java.util.List;
 import javax.ejb.EJB;
 import com.onlineshop.ejb.CartDAOLocal;
 import com.onlineshop.ejb.ProductDAOLocal;
+import com.onlineshop.entity.Prod;
+import java.util.ArrayList;
 
 /**
  *
@@ -23,9 +25,6 @@ import com.onlineshop.ejb.ProductDAOLocal;
 @SessionScoped
 public class CartBean implements Serializable {
 
-    /**
-     * Creates a new instance of CartBean
-     */
     @EJB
     ProductDAOLocal productLocal;
 
@@ -33,25 +32,45 @@ public class CartBean implements Serializable {
     CartDAOLocal cartLocal;
 
     private List<String> selectedProductIds;
-    private String customerId;
+    private List<Prod> cartProducts;
+
+    public List<Prod> getCartProducts() {
+        return cartProducts;
+    }
+
+    public void setCartProducts(List<Prod> cartProducts) {
+        this.cartProducts = cartProducts;
+    }
 
     public void addToCart(String emailId) {
         selectedProductIds.forEach(pid -> {
-            int quantity=cartLocal.getQuantityInCart(emailId, pid);
-            if ( quantity==0) {
+            int quantity = cartLocal.getQuantityInCart(emailId, pid);
+            if (quantity == 0) {
                 cartLocal.addProductToCart(new Cart(new CartPK(emailId, pid), 1));
             } else {
-                cartLocal.updateProductInCart(new Cart(new CartPK(emailId, pid), quantity+1));
+                cartLocal.updateProductInCart(new Cart(new CartPK(emailId, pid), quantity + 1));
             }
         });
     }
 
-    public String getCustomerId() {
-        return customerId;
-    }
+    public String getProductsInCart(String emailId) {
+        List<Cart> cartItems;
+        List<String> productIds = new ArrayList<>();
+        List<Prod> productList = new ArrayList<>();
+        cartItems = cartLocal.getAllProductsForUser(emailId);
+        cartItems.forEach(p -> {
+            productIds.add(p.getCartPK().getProductid());
+            Prod product=productLocal.getProduct(p.getCartPK().getProductid());
+            product.setQuantity(p.getQuantity());
+            productList.add(product);
+        });
 
-    public void setCustomerId(String customerId) {
-        this.customerId = customerId;
+//        productIds.forEach((productId) -> {
+//            productList.add(productLocal.getProduct(productId));
+//        });
+
+        setCartProducts(productList);
+        return "success";
     }
 
     public CartBean(List<String> selectedProducts) {

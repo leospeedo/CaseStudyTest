@@ -6,7 +6,6 @@
 package com.onlineshop.ejb;
 
 import com.onlineshop.entity.Cart;
-import com.onlineshop.entity.Prod;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -20,4 +19,5 @@ public interface CartDAOLocal {
     public boolean updateProductInCart(Cart productInCart);
     public int getQuantityInCart(String emailId, String productId);
     public List getAll();
+    public List getAllProductsForUser(String emailId);
 }

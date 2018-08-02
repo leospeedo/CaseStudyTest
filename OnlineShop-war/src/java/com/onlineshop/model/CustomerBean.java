@@ -12,17 +12,10 @@ import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import javax.ejb.EJB;
 
-/**
- *
- * @author satyam
- */
 @Named(value = "customer")
 @SessionScoped
 public class CustomerBean implements Serializable {
 
-    /**
-     * Creates a new instance of CustomerBean
-     */
     @EJB
     CustomerDAOLocal customerDAOLocal;
 
@@ -41,20 +34,7 @@ public class CustomerBean implements Serializable {
     }
 
     public String doLogin() {
-//        Cust validCust=customerDAOLocal.getCustomer(emailid);
-//        Cust testCust=new Cust("","",emailid,password);
-//        if(testCust.getEmailid().equals(validCust.getEmailid())&&testCust.getPassword().equals(validCust.getPassword())){
-//            return "success";
-//        }
-//        else{
-//            return "fail";
-//        }
         return customerDAOLocal.verifyCustomer(emailid, password);
-//        if (validCust != null) {
-//            return "success";
-//        } else {
-//            return "fail";
-//        }
     }
 
     public String getFname() {

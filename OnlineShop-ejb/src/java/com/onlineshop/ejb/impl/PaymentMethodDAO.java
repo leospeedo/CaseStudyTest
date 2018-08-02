@@ -12,7 +12,7 @@ import com.onlineshop.ejb.PaymentMethodDAOLocal;
  *
  * @author satyam
  */
-@Stateless
+@Stateless(mappedName = "onlineshop/ejb/paymentMethodDAO")
 public class PaymentMethodDAO implements PaymentMethodDAOLocal {
 
     // Add business logic below. (Right-click in editor and choose

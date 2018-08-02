@@ -3,22 +3,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui">>
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        Hello user
+        Hello user: #{customer.emailid}
         <h:form>
-            <h3 style="margin-top:0px">Basic Layout</h3>
+            <h2>Products</h2>
             <p:selectManyCheckbox id="basic" value="#{cart.selectedProductIds}">
-                <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
-                <f:selectItem itemLabel="PS4" itemValue="PS4" />
-                <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+                <f:selectItem itemLabel="Xbox One" itemValue="xboxone" />
+                <f:selectItem itemLabel="PS4" itemValue="ps4" />
+                <f:selectItem itemLabel="Wii U" itemValue="wii" />
             </p:selectManyCheckbox>
-            <!--<p:commandLink value="View cart" action="cart.xhtml"/>-->
+            <!--<p:link value="View cart" outcome="cart.xhtml"/>-->
             <p:commandButton value ="Add to cart" action="#{cart.addToCart(customer.emailid)}"/>
+            <p:commandButton value="View Cart" action="#{cart.getProductsInCart(customer.emailid)}"/>
         </h:form>
     </h:body>
 </html>

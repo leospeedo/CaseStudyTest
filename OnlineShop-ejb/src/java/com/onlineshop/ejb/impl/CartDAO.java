@@ -6,7 +6,6 @@
 package com.onlineshop.ejb.impl;
 
 import com.onlineshop.entity.Cart;
-import com.onlineshop.entity.Prod;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -18,7 +17,7 @@ import com.onlineshop.ejb.CartDAOLocal;
  *
  * @author satyam
  */
-@Stateless
+@Stateless(mappedName = "onlineshop/ejb/cartDAO")
 public class CartDAO implements CartDAOLocal {
 
     @PersistenceContext(name = "OnlineShop-ejbPU")
@@ -52,6 +51,17 @@ public class CartDAO implements CartDAOLocal {
             return productInCart.getQuantity();
         } catch(Exception e){
             return 0;
+        }
+    }
+    
+    @Override
+    public List getAllProductsForUser(String emailId){
+        Query query=entityManager.createNamedQuery("Cart.findProductsForUser", Cart.class);
+        query.setParameter("customerid", emailId);
+        try{
+            return query.getResultList();
+        } catch(Exception e){
+            return null;
         }
     }
 }

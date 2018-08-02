@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.onlineshop.ejb.impl;
 
 import com.onlineshop.entity.Prod;
@@ -17,7 +12,7 @@ import com.onlineshop.ejb.ProductDAOLocal;
  *
  * @author satyam
  */
-@Stateless
+@Stateless(mappedName = "onlineshop/ejb/productDAO")
 public class ProductDAO implements ProductDAOLocal {
 
     @PersistenceContext(name = "OnlineShop-ejbPU")
@@ -33,7 +28,9 @@ public class ProductDAO implements ProductDAOLocal {
     public Prod getProduct(String productId) {
         Query query=entityManager.createNamedQuery("Prod.findByProductid", Prod.class);
         query.setParameter("productid", productId);
-        return (Prod)query.getSingleResult();
+        Prod product=new Prod();
+        product=(Prod) query.getSingleResult();
+        return product;
     }
 
     @Override
@@ -41,7 +38,5 @@ public class ProductDAO implements ProductDAOLocal {
         Query query=entityManager.createNamedQuery("Prod.findAll",Prod.class);
         return query.getResultList();
     }
-
-    // Add business logic below. (Right-click in editor and choose
-    // "Insert Code > Add Business Method")
+    
 }

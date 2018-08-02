@@ -12,7 +12,7 @@ import com.onlineshop.ejb.CreditCardDAOLocal;
  *
  * @author satyam
  */
-@Stateless
+@Stateless(mappedName = "onlineshop/ejb/creditCardDAO")
 public class CreditCardDAO implements CreditCardDAOLocal {
 
     // Add business logic below. (Right-click in editor and choose
